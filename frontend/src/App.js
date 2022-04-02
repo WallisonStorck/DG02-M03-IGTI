@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Candidates from "./components/Candidates";
+import Header from "./components/Header";
+import Spinner from "./components/Spinner";
 
 export default class App extends Component {
   constructor() {
@@ -27,21 +30,14 @@ export default class App extends Component {
   render() {
     const { candidates } = this.state;
 
-    console.log(candidates);
-
     if (candidates.length === 0) {
-      return <h2>Loading...</h2>;
+      return <Spinner />;
     }
 
     return (
       <>
-        {candidates.map(({ id, name, votes }) => {
-          return (
-            <p key={id}>
-              {name} - {votes}
-            </p>
-          );
-        })}
+        <Header title={"Votação"} />
+        <Candidates candidates={candidates} />
       </>
     );
   }

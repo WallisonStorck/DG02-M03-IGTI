@@ -13,18 +13,18 @@ Front End
    corretamente
 
 () Componentizar app
-   () Spinner
-   () Header
+   (✔) Spinner
+   (✔) Header
    () Candidates 
    () Card 
    () Candidate 
    () Position
    () Picture
    () Info
-   () Name
-   () Votes
-   () Percentage
-   () Popularity
+      () Name
+      () Votes
+      () Percentage
+      () Popularity
 
 () Estilizar o app
 
