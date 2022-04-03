@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a fhref="#-tecnologias">Tecnologias</a>
+  <a href="#-tecnologias">Tecnologias</a>
  </p>
 
 <br>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Candidates from "./components/Candidates";
+import Candidates from "./components/candidates/Candidates";
 import Header from "./components/Header";
 import Spinner from "./components/Spinner";
 

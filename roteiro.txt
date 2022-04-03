@@ -15,8 +15,8 @@ Front End
 () Componentizar app
    (✔) Spinner
    (✔) Header
-   () Candidates 
-   () Card 
+   (✔) Candidates 
+   (✔) Card 
    () Candidate 
    () Position
    () Picture
