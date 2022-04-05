@@ -5,13 +5,18 @@ import Picture from "./Picture";
 import Position from "./Position";
 
 export default function Card({ candidate }) {
-  const { id, name, votes } = candidate;
+  const { id, name, votes, percentage, popularity } = candidate;
 
   return (
     <div className={css.card}>
       <Position>{id}</Position>
       <Picture imageSource={`${id}.jpg`} description={name} />
-      <Info name={name} votes={votes} />
+      <Info
+        name={name}
+        votes={votes}
+        percentage={percentage}
+        popularity={popularity}
+      />
     </div>
   );
 }

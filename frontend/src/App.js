@@ -35,10 +35,10 @@ export default class App extends Component {
     }
 
     return (
-      <>
-        <Header title={"Votação"} />
+      <div style={{ width: "30%" }}>
+        <Header>Votação</Header>
         <Candidates candidates={candidates} />
-      </>
+      </div>
     );
   }
 }

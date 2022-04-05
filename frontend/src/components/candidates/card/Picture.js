@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./Picture.module.css";
+import css from "./Card.module.css";
 
 export default function Picture({ imageSource, description }) {
   return (

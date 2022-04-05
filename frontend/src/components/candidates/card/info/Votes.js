@@ -1,9 +1,6 @@
 import React from "react";
+import css from "../Card.module.css";
 
 export default function Votes({ children }) {
-  return (
-    <>
-      <span>{children}</span>
-    </>
-  );
+  return <span className={css.votes}>{children}</span>;
 }

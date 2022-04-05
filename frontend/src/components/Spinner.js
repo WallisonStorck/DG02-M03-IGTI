@@ -3,7 +3,7 @@ import React from "react";
 export default function Spinner() {
   return (
     <>
-      <h5>Loading</h5>
+      <h5>Loading...</h5>
       <div className="preloader-wrapper small active">
         <div className="spinner-layer spinner-green-only">
           <div className="circle-clipper left">
