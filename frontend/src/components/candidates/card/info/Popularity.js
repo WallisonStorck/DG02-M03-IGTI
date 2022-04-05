@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Stars({ popularity }) {
+export default function Popularity({ popularity }) {
   const STARTS = {
     empty: "☆",
     full: "★",

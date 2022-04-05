@@ -1,6 +1,6 @@
 import React from "react";
-import css from "../Card.module.css";
+import { formatPercentage } from "../../../helpers/formatters";
 
 export default function Percentage({ children }) {
-  return <span className={css.percentage}>{children}</span>;
+  return <span>{formatPercentage(children)}</span>;
 }

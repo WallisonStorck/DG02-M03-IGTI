@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import css from "./App.module.css";
 import Candidates from "./components/candidates/Candidates";
 import Header from "./components/Header";
 import Spinner from "./components/Spinner";
@@ -35,7 +36,7 @@ export default class App extends Component {
     }
 
     return (
-      <div style={{ width: "30%" }}>
+      <div className={css.container}>
         <Header>Votação</Header>
         <Candidates candidates={candidates} />
       </div>

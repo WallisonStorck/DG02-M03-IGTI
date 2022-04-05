@@ -1,9 +1,7 @@
 import React from "react";
 import Card from "./card/Card";
 
-export default function Candidates(props) {
-  const { candidates } = props;
-
+export default function Candidates({ candidates }) {
   return (
     <>
       {candidates.map((candidate) => {
