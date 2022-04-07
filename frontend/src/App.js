@@ -32,13 +32,17 @@ export default class App extends Component {
     const { candidates } = this.state;
 
     if (candidates.length === 0) {
-      return <Spinner />;
+      return (
+        <div className={css.spinner}>
+          <Spinner />
+        </div>
+      );
     }
 
     return (
-      <div className={css.container}>
+      <div className={css.vote}>
         <Header>Votação</Header>
-        <Candidates candidates={candidates} />
+        <Candidates>{candidates}</Candidates>
       </div>
     );
   }

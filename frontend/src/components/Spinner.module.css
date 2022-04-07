@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.message {
+  margin: 0px 15px;
+  font-size: larger;
+}
