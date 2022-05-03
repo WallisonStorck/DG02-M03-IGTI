@@ -14,14 +14,14 @@
 <br>
 
 <p align="center">
-  <img alt="Rocket.Q" src="./referencia.png">
+  <img alt="Votação" src="./referencia.png">
 </p>
 
 <br>
 
 ## 💻 Projeto
 
-O Desafio Guiado 02 - Módulo 3 - Bootcamp FullStack IGTI (DG02-M03-IGTI) é um desafio no qual já é fornecido um projeto back-end que consiste num sistema de votação de três candidatos onde os atributos são: votos, percentual e popularidade, o objetivo desse desafio é fazer o front-end em React usando o máximo de Functional Components possível...para acessar o sistema de votação basta iniciar com o comando:
+O React Votação é o segundo desafio guiado do módulo 3 - Bootcamp FullStack IGTI (DG02-M03-IGTI) é um desafio no qual já é fornecido um projeto back-end que consiste num sistema de votação de três candidatos onde os atributos são: votos, percentual e popularidade, o objetivo desse desafio é fazer o front-end em React usando o máximo de Functional Components possível...para acessar o sistema de votação basta iniciar com o comando:
 
 ```bash
 npm start

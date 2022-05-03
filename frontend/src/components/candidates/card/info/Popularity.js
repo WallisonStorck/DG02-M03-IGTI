@@ -8,12 +8,13 @@ export default function Popularity({ popularity }) {
 
   const MAX_STARTS = 10;
 
-  const startsFull = popularity;
-  const startsEmpty = MAX_STARTS - popularity;
+  const startsFull = STARTS.full.repeat(popularity);
+  const startsEmpty = STARTS.empty.repeat(MAX_STARTS - popularity);
 
   return (
-    <span>{`${STARTS.full.repeat(startsFull)}${STARTS.empty.repeat(
-      startsEmpty
-    )}`}</span>
+    <span style={{ color: "#f39c12", fontSize: "1.3rem" }}>
+      {startsFull}
+      {startsEmpty}
+    </span>
   );
 }

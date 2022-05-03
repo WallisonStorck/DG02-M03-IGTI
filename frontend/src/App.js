@@ -9,7 +9,9 @@ export default class App extends Component {
     super();
 
     this.state = {
-      candidates: "",
+      candidates: [],
+      previousVotes: [],
+      previousPercentage: [],
     };
     this.interval = null;
   }
@@ -21,16 +23,27 @@ export default class App extends Component {
           return res.json();
         })
         .then((json) => {
+          const previousVotes = this.state.candidates.map(({ id, votes }) => {
+            return { id, votes };
+          });
+
+          const previousPercentage = this.state.candidates.map(
+            ({ id, percentage }) => {
+              return { id, percentage };
+            }
+          );
+
           this.setState({
             candidates: json.candidates,
+            previousVotes,
+            previousPercentage,
           });
         });
     }, 1000);
   }
 
   render() {
-    const { candidates } = this.state;
-
+    const { candidates, previousVotes, previousPercentage } = this.state;
     if (candidates.length === 0) {
       return (
         <div className={css.spinner}>
@@ -38,11 +51,14 @@ export default class App extends Component {
         </div>
       );
     }
-
     return (
       <div className={css.vote}>
         <Header>Votação</Header>
-        <Candidates>{candidates}</Candidates>
+        <Candidates
+          previousVotes={previousVotes}
+          previousPercentage={previousPercentage}
+          candidates={candidates}
+        />
       </div>
     );
   }
