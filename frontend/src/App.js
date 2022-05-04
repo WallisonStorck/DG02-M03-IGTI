@@ -11,7 +11,7 @@ export default class App extends Component {
     this.state = {
       candidates: [],
       previousVotes: [],
-      previousPercentage: [],
+      previousPercentages: [],
     };
     this.interval = null;
   }
@@ -27,7 +27,7 @@ export default class App extends Component {
             return { id, votes };
           });
 
-          const previousPercentage = this.state.candidates.map(
+          const previousPercentages = this.state.candidates.map(
             ({ id, percentage }) => {
               return { id, percentage };
             }
@@ -36,14 +36,14 @@ export default class App extends Component {
           this.setState({
             candidates: json.candidates,
             previousVotes,
-            previousPercentage,
+            previousPercentages,
           });
         });
     }, 1000);
   }
 
   render() {
-    const { candidates, previousVotes, previousPercentage } = this.state;
+    const { candidates, previousVotes, previousPercentages } = this.state;
     if (candidates.length === 0) {
       return (
         <div className={css.spinner}>
@@ -56,7 +56,7 @@ export default class App extends Component {
         <Header>Votação</Header>
         <Candidates
           previousVotes={previousVotes}
-          previousPercentage={previousPercentage}
+          previousPercentages={previousPercentages}
           candidates={candidates}
         />
       </div>

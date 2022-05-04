@@ -7,7 +7,7 @@ import FlipMove from "react-flip-move";
 export default function Candidates({
   candidates,
   previousVotes,
-  previousPercentage,
+  previousPercentages,
 }) {
   return (
     <div>
@@ -23,10 +23,10 @@ export default function Candidates({
             ? previousVoteObject.votes
             : 0;
 
-          const previousPercentageObject = previousPercentage.find(
+          const previousPercentageObject = previousPercentages.find(
             (item) => item.id === id
           );
-          const previousPercent = !!previousPercentageObject
+          const previousPercentage = !!previousPercentageObject
             ? previousPercentageObject.percentage
             : 0;
 
@@ -36,7 +36,7 @@ export default function Candidates({
                 <Position>{index}</Position>
                 <Candidate
                   previousVote={previousVote}
-                  previousPercentage={previousPercent}
+                  previousPercentage={previousPercentage}
                   candidate={candidate}
                 />
               </Card>

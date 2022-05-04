@@ -1,11 +1,8 @@
 import React from "react";
 import CountUp from "react-countup";
 
-import { formatPercentage } from "../../../helpers/formatters";
-
 export default function Percentage({ value, previous }) {
   return (
-    // <span style={{ fontSize: "1.2rem" }}>{formatPercentage(children)}</span>
     <CountUp
       start={previous}
       end={value}
@@ -16,11 +13,7 @@ export default function Percentage({ value, previous }) {
     >
       {({ countUpRef }) => (
         <div>
-          <span
-            style={{ fontSize: "1.2rem" }}
-            ref={countUpRef}
-            // ref={formatPercentage(countUpRef)}
-          />
+          <span style={{ fontSize: "1.2rem" }} ref={countUpRef} />
         </div>
       )}
     </CountUp>
