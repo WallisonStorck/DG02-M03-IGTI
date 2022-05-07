@@ -1,6 +1,5 @@
 import React from "react";
 import CountUp from "react-countup";
-import { formatNumber } from "../../../helpers/formatters";
 
 export default function Votes({ value, previous }) {
   return (
